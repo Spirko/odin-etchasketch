@@ -21,7 +21,7 @@ function initEAS(rows=10, cols=10) {
   }
 
   document.querySelectorAll('.gridCell').forEach( e =>
-    e.addEventListener('mouseover', activateCell)
+    e.addEventListener('mouseenter', activateCell)
   );
 }
 
