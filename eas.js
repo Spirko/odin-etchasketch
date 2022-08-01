@@ -1,12 +1,14 @@
 'use strict';
 
-function initEAS(rows=10, cols=10) {
+function initEAS(rows=10, cols=12) {
+  document.querySelector('#rows').value = rows;
+  document.querySelector('#cols').value = cols;
+
   const container = document.querySelector('#container');
-  container.innerText = '';
 
   const grid = document.createElement('div');
   grid.classList.add('grid');
-  container.appendChild(grid);
+  container.replaceChildren(grid);
 
   for(let i=0; i<rows; i++) {
     const gridRow = document.createElement('div');
@@ -25,9 +27,16 @@ function initEAS(rows=10, cols=10) {
   );
 }
 
+function doResize(e) {
+  const newRows = parseInt(document.querySelector('#rows').value);
+  const newCols = parseInt(document.querySelector('#cols').value);
+  initEAS(newRows, newCols);
+}
+document.querySelector('#resize').addEventListener('click', doResize);
+
 function activateCell(e) {
-  console.log(window.getComputedStyle(this).backgroundColor);
-  this.style.backgroundColor = 'black';
+  // console.log(window.getComputedStyle(this).backgroundColor);
+  setTimeout(() => this.style.backgroundColor = 'black', 0);
 }
 
 initEAS();
