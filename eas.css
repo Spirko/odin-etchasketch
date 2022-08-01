@@ -6,7 +6,16 @@ body {
 .title {
   text-align: center;
   margin: 0px; border: 10px; border-radius: 8px;
-  background-color: pink;
+  background-color: lightblue;
+}
+#controls {
+  margin: 0px; border-radius: 8px; padding: 8px; gap: 16px;
+  background-color: lightpink;
+  border: 1px solid red;
+  display: flex; justify-content: center; align-items: center;
+}
+input {
+  text-align: center;
 }
 #container {
   flex: 1;
@@ -17,7 +26,7 @@ body {
 }
 footer {
   margin: 0px; border: 10px; border-radius: 8px; padding: 10px;
-  background-color: pink;
+  background-color: lightgrey;
   display: flex; justify-content: center; align-items: center;
   gap: 50px;
 }
@@ -31,10 +40,10 @@ footer {
   flex: 1;
   display: flex; justify-content: stretch; align-items: stretch;
   background-color: lightgreen;
-  border: 1px solid green;
+  /* border: 1px solid green; */
 }
 .gridCell {
   flex: 1;
   background-color: white;
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
 }
